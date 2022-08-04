@@ -22,250 +22,265 @@ import {
   CodePane,
   MarkdownSlide,
   MarkdownSlideSet,
-  Notes
+  Notes,
+  Link,
 } from 'spectacle';
 
-const formidableLogo =
-  'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
+import Beyonce from './beyonce_tweet.png';
+import Disabilities from './disabilities-ms.jpeg';
 
-// SPECTACLE_CLI_THEME_START
+// sponsors
+// import Sponsors from './beer-city-code-2022-sponsors.png';
+const SHOW_SPONSORS = false;
+
 const theme = {
   fonts: {
-    header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
-    text: '"Open Sans Condensed", Helvetica, Arial, sans-serif'
+    header: 'Georgia, "Open Sans Condensed", Helvetica, Arial, sans-serif',
+    text: 'Montserrat, "Open Sans Condensed", Helvetica, Arial, sans-serif'
   }
 };
-// SPECTACLE_CLI_THEME_END
 
-// SPECTACLE_CLI_TEMPLATE_START
 const template = () => (
   <FlexBox
     justifyContent="space-between"
     position="absolute"
-    bottom={0}
+    bottom="-42px"
     width={1}
   >
-    <Box padding="0 1em">
-      <FullScreen />
+    <Box padding="0">
+      <Text fontSize="1.5em">@NathanLoding</Text>
     </Box>
-    <Box padding="1em">
-      <Progress />
+    <Box textAlign="right" padding="0">
+      <Text fontSize="1.5em">
+        <strong>CONFERENCE NAME</strong> -
+        The Value of Accessibility
+      </Text>
     </Box>
   </FlexBox>
-);
-// SPECTACLE_CLI_TEMPLATE_END
-
-const SlideFragments = () => (
-  <>
-    <Slide>
-      <Text>This is a slide fragment.</Text>
-    </Slide>
-    <Slide>
-      <Text>This is also a slide fragment.</Text>
-      <Appear>
-        <Text>This item shows up!</Text>
-      </Appear>
-      <Appear>
-        <Text>This item also shows up!</Text>
-      </Appear>
-    </Slide>
-  </>
 );
 
 const Presentation = () => (
   <Deck theme={theme} template={template}>
-    <Slide>
-      <FlexBox height="100%">
-        <SpectacleLogo size={500} />
-      </FlexBox>
-      <Notes>
-        Spectacle supports notes per slide.
-        <ol>
-          <li>Notes can now be HTML markup!</li>
-          <li>Lists can make it easier to make points.</li>
-        </ol>
-      </Notes>
-    </Slide>
+
     <Slide>
       <FlexBox height="100%" flexDirection="column">
-        <Heading margin="0px" fontSize="150px">
-          ✨<i>Spectacle</i> ✨
-        </Heading>
-        <Heading margin="0px" fontSize="h2">
-          A ReactJS Presentation Library
-        </Heading>
-        <Heading margin="0px 32px" color="primary" fontSize="h3">
-          Where you can write your decks in JSX, Markdown, or MDX!
-        </Heading>
+        <Heading fontSize="130px">The Value of Accessibility</Heading>
+        <Heading fontSize="h3" color="#ebe5da">A Business Case for A11y</Heading>
       </FlexBox>
+      <Notes>
+        Welcome to my talk! In the last year or two, a lot has been written about the "ROI" or "return
+        on investment" of accessibility. There are lots of sites out there (many linked in my repo), and
+        I encourage everyone to do a little bit more research about accessibility in your particular
+        market.
+      </Notes>
     </Slide>
-    <Slide
-      transition={{
-        from: {
-          transform: 'scale(0.5) rotate(45deg)',
-          opacity: 0
-        },
-        enter: {
-          transform: 'scale(1) rotate(0)',
-          opacity: 1
-        },
-        leave: {
-          transform: 'scale(0.2) rotate(315deg)',
-          opacity: 0
-        }
-      }}
-      backgroundColor="tertiary"
-      backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/main/src/beau.jpg?raw=true)"
-      backgroundOpacity={0.5}
-    >
-      <Heading>Custom Backgrounds</Heading>
-      <UnorderedList>
-        <ListItem>
-          <CodeSpan>backgroundColor</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundImage</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundOpacity</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundSize</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundPosition</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundRepeat</CodeSpan>
-        </ListItem>
-      </UnorderedList>
-    </Slide>
-    <Slide>
-      <Heading>Animated Elements</Heading>
-      <OrderedList>
-        <Appear>
-          <ListItem>Elements can animate in!</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Out of order</ListItem>
-        </Appear>
-        <Appear priority={0}>
-          <ListItem>
-            Just identify the order with the prop <CodeSpan>priority</CodeSpan>!
-          </ListItem>
-        </Appear>
-      </OrderedList>
-    </Slide>
-    <Slide>
-      <FlexBox>
-        <Text>These</Text>
-        <Text>Text</Text>
-        <Text color="secondary">Items</Text>
-        <Text fontWeight="bold">Flex</Text>
-      </FlexBox>
-      <Grid gridTemplateColumns="1fr 2fr" gridColumnGap={15}>
-        <Box backgroundColor="primary">
-          <Text color="secondary">Single-size Grid Item</Text>
-        </Box>
-        <Box backgroundColor="secondary">
-          <Text>Double-size Grid Item</Text>
-        </Box>
-      </Grid>
-      <Grid
-        gridTemplateColumns="1fr 1fr 1fr"
-        gridTemplateRows="1fr 1fr 1fr"
-        alignItems="center"
-        justifyContent="center"
-        gridRowGap={1}
-      >
-        {Array(9)
-          .fill('')
-          .map((_, index) => (
-            <FlexBox paddingTop={0} key={`formidable-logo-${index}`} flex={1}>
-              <Image src={formidableLogo} width={100} />
-            </FlexBox>
-          ))}
-      </Grid>
-    </Slide>
-    <SlideFragments />
-    <Slide>
-      <CodePane language="jsx">{`
-        import { createClient, Provider } from 'urql';
 
-        const client = createClient({ url: 'https://0ufyz.sse.codesandbox.io' });
-
-        const App = () => (
-          <Provider value={client}>
-            <Todos />
-          </Provider>
-        );
-        `}</CodePane>
-      <Box height={20} />
-      <CodePane language="java" showLineNumbers={false}>{`
-        public class NoLineNumbers {
-          public static void main(String[] args) {
-            System.out.println("Hello");
-          }
-        }
-        `}</CodePane>
-    </Slide>
-    <div>
+    {SHOW_SPONSORS &&
       <Slide>
-        <Heading>This is a slide embedded in a div</Heading>
+        <FlexBox height="100%">
+          <Image src={Sponsors} maxHeight="100%" maxWidth="100%" width="auto" />
+        </FlexBox>
       </Slide>
-    </div>
-    <MarkdownSlide componentProps={{ color: 'yellow' }}>
-      {`
-        # This is a Markdown Slide
+    }
 
-        - You can pass props down to all elements on the slide.
-        - Just use the \`componentProps\` prop.
-        `}
-    </MarkdownSlide>
-    <MarkdownSlide animateListItems>
-      {`
-       # This is also a Markdown Slide
-
-       It uses the \`animateListItems\` prop.
-
-       - Its list items...
-       - ...will appear...
-       - ...one at a time.
-      `}
-    </MarkdownSlide>
     <Slide>
-      <Grid
-        flex={1}
-        gridTemplateColumns="50% 50%"
-        gridTemplateRows="50% 50%"
-        height="100%"
-      >
-        <FlexBox alignItems="center" justifyContent="center">
-          <Heading>This is a 4x4 Grid</Heading>
-        </FlexBox>
-        <FlexBox alignItems="center" justifyContent="center">
-          <Text textAlign="center">
-            With all the content aligned and justified center.
-          </Text>
-        </FlexBox>
-        <FlexBox alignItems="center" justifyContent="center">
-          <Text textAlign="center">
-            It uses Spectacle <CodeSpan>{'<Grid />'}</CodeSpan> and{' '}
-            <CodeSpan>{'<FlexBox />'}</CodeSpan> components.
-          </Text>
-        </FlexBox>
-        <FlexBox alignItems="center" justifyContent="center">
-          <Box width={200} height={200} backgroundColor="secondary" />
-        </FlexBox>
-      </Grid>
+      <FlexBox height="100%">
+        <Heading fontSize="h3">Quick Poll</Heading>
+        <UnorderedList>
+          <Appear><ListItem>Anyone have a disability?</ListItem></Appear>
+          <Appear><ListItem>Anyone had a temporary disability?</ListItem></Appear>
+          <Appear><ListItem>Anyone do accessibility testing?</ListItem></Appear>
+          <Appear><ListItem>Anyone have an accessibility statement?</ListItem></Appear>
+        </UnorderedList>
+      </FlexBox>
+      <Notes>
+        I like to start my talks with a quick poll so I know who I'm dealing with. Even though I'm
+        up here talking, I'm usually not the smartest person in the room!
+      </Notes>
     </Slide>
-    <MarkdownSlideSet>
-      {`
-        # This is the first slide of a Markdown Slide Set
-        ---
-        # This is the second slide of a Markdown Slide Set
-        `}
-    </MarkdownSlideSet>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">Who am I?</Heading>
+    <UnorderedList>
+      <Appear><ListItem>He / him ... PTSD</ListItem></Appear>
+      <Appear><ListItem>Husband, father, amateur historian</ListItem></Appear>
+      <Appear><ListItem>Oreo enthusiast</ListItem></Appear>
+      <Appear><ListItem>Senior Developer Relations Engineer @ <Link href="https://basistheory.com/">Basis Theory</Link></ListItem></Appear>
+      <Appear><ListItem><Link href="https://twitter.com/NathanLoding">@NathanLoding</Link>*</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    Why I asked the poll questions - I am often not the smartest person in the room!
+  </Notes>
+</Slide>
+
+    <Slide>
+      <FlexBox height="100%">
+        <Image src={Beyonce} maxHeight="100%" maxWidth="100%" width="auto" />
+      </FlexBox>
+      <Notes>
+        What's your immediate reaction to this? Why?
+      </Notes>
+    </Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">There's more to it than lawsuits</Heading>
+    <UnorderedList>
+      <Appear><ListItem>🪠 - lawsuits, liabilities, PR issues</ListItem></Appear>
+      <Appear><ListItem>🥕 - increased customer base, lower operational costs, aligned values</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    The stick and the carrot - the two great motivators. Except there isn't a stick emoji on Mac. So plunger and carrot!
+    Before we can talk about these, we need to set the stage so we all have the same basic understanding
+    of what we are actually talking about!
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">What is "A11y"?</Heading>
+    <Appear><Text>"Accessibility" = "A" + 11 letters "Y"</Text></Appear>
+  </FlexBox>
+  <Notes>
+    A11y is a numeronym.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">What is Accessibility?</Heading>
+    <Appear><Text>"the practice of making your websites usable by disabled people."</Text></Appear>
+  </FlexBox>
+  <Notes>
+    What do we think of this definition?
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">What is a Disability?</Heading>
+    <Appear><Text>"A disability is any condition of the body or mind that makes it more difficult for the person with the condition to do certain activities and interact with the world around them ."</Text></Appear>
+  </FlexBox>
+  <Notes>
+    Is this clear? What constitutes a disability then? PTSD, absolutely. Blind or deaf, absolutely.
+    What if you're not completely blind or deaf? What if you have carpal tunnel? What if you broke your arm?
+    What if you're pregnant? What if you're holding a baby?
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%">
+    <Heading fontSize="h2">What is a Disability?</Heading>
+    <Appear><Image src={Disabilities} maxHeight="75%" width="auto" /></Appear>
+  </FlexBox>
+  <Notes>
+    We are going to focus primarily on people with permanent disabilities as a market. However,
+    understand that everyone will be disabled at some point in their life.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">What is Accessibility?</Heading>
+    <Appear><Text>"the practice of making your websites usable by as many people as possible."</Text></Appear>
+  </FlexBox>
+  <Notes>
+    What do we think of this new definition?
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Accessibility === Usability
+    </Heading>
+  </FlexBox>
+  <Notes>
+    There is no difference. Accessibility is not separate from user experience. If your website isn't
+    accessible, it's not usable. Period.
+
+    <p>And now that we have a basic understanding of what we're talking about, let's look at some high level numbers.</p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">By the numbers ...</Heading>
+    <UnorderedList>
+      <Appear><ListItem><strong>96.8%</strong> of top 1M websites have clear accessibility issues</ListItem></Appear>
+      <Appear><ListItem><strong>71%</strong> of disabled people abandon sites with issues</ListItem></Appear>
+      <Appear><ListItem><strong>93%</strong> of disabled people don't report issues</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    That last bullet? That's completely about stigma.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">Follow the money ...</Heading>
+    <UnorderedList>
+      <Appear>
+        <ListItem>
+          <strong>$490 Billion</strong> in disposable income
+          <Appear tagName="ul">
+            <ListItem><em>$582B</em> - Hispanic market</ListItem>
+            <ListItem><em>$501B</em> - African American market</ListItem>
+          </Appear>
+        </ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>
+          <strong>$21 Billion</strong> in discretionary income
+          <Appear tagName="ul">
+            <ListItem><em>$16B</em> - Hispanic market</ListItem>
+            <ListItem><em>$3B</em> - African American market</ListItem>
+          </Appear>
+        </ListItem>
+      </Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    Don't get me wrong, DE&I is extremely important, and understanding these income gaps is very
+    important. We aren't here to cover that unfortunately, though I do have some stats on DE&I
+    that we will talk about later.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">In the United States ...</Heading>
+    <UnorderedList>
+      <Appear><ListItem><strong>1 in 5</strong> are disabled</ListItem></Appear>
+      <Appear><ListItem><strong>8.1 Million</strong> are visually impaired</ListItem></Appear>
+      <Appear><ListItem><strong>2 Million</strong> are blind</ListItem></Appear>
+      <Appear><ListItem><strong>7.6 Million</strong> have auditory impairment</ListItem></Appear>
+      <Appear><ListItem><strong>2.2 Million</strong> suffer seizures</ListItem></Appear>
+      <Appear><ListItem><strong>19.9 Million</strong> are motor impaired</ListItem></Appear>
+      <Appear><ListItem><strong>35%</strong> are working age</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Is that enough 🥕?
+    </Heading>
+  </FlexBox>
+  <Notes>
+    Part of me wants to end the talk here. Half a trillion dollars sitting on the table - go
+    get it! But wait, I've got more!
+  </Notes>
+</Slide>
+
   </Deck>
 );
 

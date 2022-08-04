@@ -24,7 +24,7 @@ e-commerce
 $517B in 2018 in North America
 2% were blind (per Deque commissioned study)
 $10.3B for just blind users
-more than 70% of e-commerce sites aren't accessible (https://nucleusresearch.com/research/single/the-internet-is-unavailable/)
+more than 70% of e-commerce sites aren't accessible (https://accessibility.deque.com/nucleus-accessibility-research-2019)
 that translates to $6.9B annually
 consumer's don't not buy that thing - they go where they can buy it
 
@@ -94,3 +94,10 @@ are you measure disabled user engagements?
 https://www.w3.org/WAI/business-case/
 https://karlgroves.com/the-truth-about-the-roi-of-web-accessibility/
 https://techcrunch.com/2021/07/21/the-real-roi-of-making-your-products-more-accessible/
+https://www.boia.org/blog/brands-are-losing-billions-by-not-being-digitally-accessible
+https://www.air.org/sites/default/files/2022-03/Hidden-Market-Spending-Power-of-People-with-Disabilities-April-2018.pdf
+
+curb cuts: https://mosaicofminds.medium.com/the-curb-cut-effect-how-making-public-spaces-accessible-to-people-with-disabilities-helps-everyone-d69f24c58785
+https://ssir.org/articles/entry/the_curb_cut_effect
+
+lawsuits: https://usablenet.com/resources
