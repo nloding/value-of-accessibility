@@ -24,6 +24,11 @@ import {
   MarkdownSlideSet,
   Notes,
   Link,
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableCell,
 } from 'spectacle';
 
 import Beyonce from './beyonce_tweet.png';
@@ -216,7 +221,11 @@ const Presentation = () => (
     </UnorderedList>
   </FlexBox>
   <Notes>
-    That last bullet? That's completely about stigma.
+    <ol>
+      <li>The WebAIM project measure the top 1M sites annually. It improves by 1% or so a year.</li>
+      <li>71%!! Do you think they just never purchased that item? No, they went somewhere it was easier to purchase from.</li>
+      <li>That's it. And that last bullet? That's completely about stigma.</li>
+    </ol>
   </Notes>
 </Slide>
 
@@ -258,7 +267,7 @@ const Presentation = () => (
       <Appear><ListItem><strong>1 in 5</strong> are disabled</ListItem></Appear>
       <Appear><ListItem><strong>8.1 Million</strong> are visually impaired</ListItem></Appear>
       <Appear><ListItem><strong>2 Million</strong> are blind</ListItem></Appear>
-      <Appear><ListItem><strong>7.6 Million</strong> have auditory impairment</ListItem></Appear>
+      <Appear><ListItem><strong>7.6 Million</strong> are auditorily impaired</ListItem></Appear>
       <Appear><ListItem><strong>2.2 Million</strong> suffer seizures</ListItem></Appear>
       <Appear><ListItem><strong>19.9 Million</strong> are motor impaired</ListItem></Appear>
       <Appear><ListItem><strong>35%</strong> are working age</ListItem></Appear>
@@ -278,6 +287,213 @@ const Presentation = () => (
   <Notes>
     Part of me wants to end the talk here. Half a trillion dollars sitting on the table - go
     get it! But wait, I've got more!
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">e-Commerce</Heading>
+    <UnorderedList>
+      <Appear><ListItem><strong>$870B</strong> in revenue in 2021 (14.2% increase)</ListItem></Appear>
+      <Appear><ListItem><strong>2%</strong> of that is blind users</ListItem></Appear>
+      <Appear><ListItem><strong>$17.4B</strong> market share for blind users <em>alone</em></ListItem></Appear>
+      <Appear><ListItem><strong>70%</strong> of e-Commerce sites have <strong>critical</strong> accessibility issues</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    <ol>
+      <li>e-Commerce is _everything_ these days. Everything is going online, it's why we have jobs!</li>
+      <li>e-Commerce is also generally more profitable, which we will discuss in a minute</li>
+      <li>2% is blind users ... remember they are 3% of the disabled community</li>
+      <li>"Critical" meaning the site is fully inoperable for a disabled user, different than the 1M stat before</li>
+    </ol>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Omni-channel
+    </Heading>
+  </FlexBox>
+  <Notes>
+    Let's talk omni-channel for a minute - stores that have multiple ways to
+    purchase goods, hopefully in a seamless way. Website, a call center, a brick
+    and mortar store, etc. Anyone work for an omni-channel organization?
+
+    <p><strong>Important!</strong> I need to give credit to Greg Williams at
+    Deque for this particular way of measuring missed revenue.</p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">Profit margin by channel</Heading>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableCell>Channel</TableCell>
+          <TableCell>Margin</TableCell>
+          <TableCell>Cost</TableCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>Ship from store</TableCell>
+          <TableCell>$17</TableCell>
+          <TableCell>$83</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Curbside</TableCell>
+          <TableCell>$23</TableCell>
+          <TableCell>$77</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>BOPIS</TableCell>
+          <TableCell>$23</TableCell>
+          <TableCell>$77</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>In-store</TableCell>
+          <TableCell>$33</TableCell>
+          <TableCell>$67</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Ship from Distribution Center</TableCell>
+          <TableCell>$36</TableCell>
+          <TableCell>$64</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </FlexBox>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">Cost by channel</Heading>
+    <Text fontSize="1em">*assuming 500K sales per month</Text>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableCell>Channel</TableCell>
+          <TableCell>%/sales</TableCell>
+          <TableCell>Margin</TableCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>Ship from store</TableCell>
+          <TableCell>5%</TableCell>
+          <TableCell>${(83 * 500000 * .05).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Curbside</TableCell>
+          <TableCell>10%</TableCell>
+          <TableCell>${(77 * 500000 * .1).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>BOPIS</TableCell>
+          <TableCell>10%</TableCell>
+          <TableCell>${(77 * 500000 * .1).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>In-store</TableCell>
+          <TableCell>65%</TableCell>
+          <TableCell>${(67 * 500000 * .65).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Ship from Distribution Center</TableCell>
+          <TableCell>10%</TableCell>
+          <TableCell>${(64 * 500000 * .1).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell />
+          <TableCell>Total:</TableCell>
+          <TableCell>
+            ${((83 * 500000 * .05) +
+            (77 * 500000 * .1) +
+            (77 * 500000 * .1) +
+            (67 * 500000 * .65) +
+            (64 * 500000 * .1)).toLocaleString()
+            }
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </FlexBox>
+  <Notes>
+    2021 figures: $933.30 billion on ecommerce; brick-and-mortar is $5.149 trillion. Approximately 15-20% is e-Commerce.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">Cost by channel</Heading>
+    <Text fontSize="1em">*assuming 500K sales per month</Text>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableCell>Channel</TableCell>
+          <TableCell>%/sales</TableCell>
+          <TableCell>Margin</TableCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>Ship from store</TableCell>
+          <TableCell>5%</TableCell>
+          <TableCell>${(83 * 500000 * .05).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Curbside</TableCell>
+          <TableCell>10%</TableCell>
+          <TableCell>${(77 * 500000 * .1).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>BOPIS</TableCell>
+          <TableCell>10%</TableCell>
+          <TableCell>${(77 * 500000 * .1).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>In-store</TableCell>
+          <TableCell>65% <strong>- 15%</strong>: 50%</TableCell>
+          <TableCell>${(67 * 500000 * .55).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Ship from Distribution Center</TableCell>
+          <TableCell>10% <strong>+ 15%</strong>: 25%</TableCell>
+          <TableCell>${(64 * 500000 * .2).toLocaleString()}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell />
+          <TableCell>Total:</TableCell>
+          <TableCell>
+            ${((83 * 500000 * .05) +
+            (77 * 500000 * .1) +
+            (77 * 500000 * .1) +
+            (67 * 500000 * .50) +
+            (64 * 500000 * .25)).toLocaleString()
+            }
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </FlexBox>
+  <Notes>
+    Drive additional online sales.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Savings with 15% increase in online sales
+    </Heading>
+    <Text fontSize="h2"><strong>${((34750000 - 34525000) * 12).toLocaleString()}</strong> annually</Text>
+  </FlexBox>
+  <Notes>
+    Original cost was $3,475,000, new cost is $3,452,500 per month!
+    Can that pay for you accessibility program? Probably with some to spare!
   </Notes>
 </Slide>
 
