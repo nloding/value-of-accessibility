@@ -29,10 +29,14 @@ import {
   TableBody,
   TableRow,
   TableCell,
+  Quote,
 } from 'spectacle';
 
 import Beyonce from './beyonce_tweet.png';
 import Disabilities from './disabilities-ms.jpeg';
+import Huddle from './huddle.jpeg';
+import CurbCut from './curb-cut.jpeg';
+import Lawsuits from './ada-lawsuits.png';
 
 // sponsors
 // import Sponsors from './beer-city-code-2022-sponsors.png';
@@ -76,7 +80,11 @@ const Presentation = () => (
         Welcome to my talk! In the last year or two, a lot has been written about the "ROI" or "return
         on investment" of accessibility. There are lots of sites out there (many linked in my repo), and
         I encourage everyone to do a little bit more research about accessibility in your particular
-        market.
+        market. I am going to be throwing a TON of numbers at you. I don't expect anyone to remember all of
+        this, come back to the slides on GitHub and check the data and sources for yourself.  What I
+        want to do is dispel the myths that accessibility is cost prohibitive, and that the opposite is,
+        in fact, true: accessibility leads to increased profits, lower development costs, and happier
+        customers. That's the goal of any business right?
       </Notes>
     </Slide>
 
@@ -173,6 +181,10 @@ const Presentation = () => (
     Is this clear? What constitutes a disability then? PTSD, absolutely. Blind or deaf, absolutely.
     What if you're not completely blind or deaf? What if you have carpal tunnel? What if you broke your arm?
     What if you're pregnant? What if you're holding a baby?
+
+    <p>
+      Source: CDC
+    </p>
   </Notes>
 </Slide>
 
@@ -184,6 +196,10 @@ const Presentation = () => (
   <Notes>
     We are going to focus primarily on people with permanent disabilities as a market. However,
     understand that everyone will be disabled at some point in their life.
+
+    <p>
+      Source: Microsoft Inclusive Design Toolkit / Mismatch
+    </p>
   </Notes>
 </Slide>
 
@@ -226,6 +242,14 @@ const Presentation = () => (
       <li>71%!! Do you think they just never purchased that item? No, they went somewhere it was easier to purchase from.</li>
       <li>That's it. And that last bullet? That's completely about stigma.</li>
     </ol>
+
+    <p>
+      Sources:
+      <ol>
+        <li>https://webaim.org/projects/million/</li>
+        <li>http://www.clickawaypound.com/downloads/cap16final2711.pdf</li>
+      </ol>
+    </p>
   </Notes>
 </Slide>
 
@@ -257,6 +281,13 @@ const Presentation = () => (
     Don't get me wrong, DE&I is extremely important, and understanding these income gaps is very
     important. We aren't here to cover that unfortunately, though I do have some stats on DE&I
     that we will talk about later.
+
+    <p>
+      Sources:
+      <ol>
+        <li>https://www.air.org/resource/report/hidden-market-purchasing-power-working-age-adults-disabilities</li>
+      </ol>
+    </p>
   </Notes>
 </Slide>
 
@@ -274,7 +305,7 @@ const Presentation = () => (
     </UnorderedList>
   </FlexBox>
   <Notes>
-    
+    Source: CDC
   </Notes>
 </Slide>
 
@@ -307,6 +338,13 @@ const Presentation = () => (
       <li>2% is blind users ... remember they are 3% of the disabled community</li>
       <li>"Critical" meaning the site is fully inoperable for a disabled user, different than the 1M stat before</li>
     </ol>
+    <p>
+      Sources:
+      <ol>
+        <li>https://www.forbes.com/sites/jasongoldberg/2022/02/18/e-commerce-sales-grew-50-to-870-billion-during-the-pandemic/?sh=20329ce04e83</li>
+        <li>https://accessibility.deque.com/nucleus-accessibility-research-2019</li>
+      </ol>
+    </p>
   </Notes>
 </Slide>
 
@@ -366,6 +404,9 @@ const Presentation = () => (
       </TableBody>
     </Table>
   </FlexBox>
+  <Notes>
+    Source: AlixPartners, https://www.retaildive.com/news/the-omnichannel-age-is-here-and-its-expensive/597653/
+  </Notes>
 </Slide>
 
 <Slide>
@@ -494,6 +535,409 @@ const Presentation = () => (
   <Notes>
     Original cost was $3,475,000, new cost is $3,452,500 per month!
     Can that pay for you accessibility program? Probably with some to spare!
+    This is why companies encourage paperless, discounts if you use ACH/EFT, etc.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">What is Accessibility?</Heading>
+    <Appear><Text>"the practice of making your websites <strong>usable by as many people as possible</strong>."</Text></Appear>
+  </FlexBox>
+  <Notes>
+    If accessibility is usability, that means your overall usability improves with
+    accessibility. 
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">Is there ROI for good UX?</Heading>
+    <UnorderedList>
+      <Appear><ListItem><strong>35%</strong> increase in sales conversions</ListItem></Appear>
+      <Appear><ListItem><strong>83%</strong> increase for all KPIs</ListItem></Appear>
+      <Appear><ListItem><strong>79%</strong> of users will go elsewhere</ListItem></Appear>
+      <Appear><ListItem><strong>43%</strong> increase in performance, vs 14.5%</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    <p>Sources:</p>
+    <ol>
+      <li>https://baymard.com/lists/cart-abandonment-rate</li>
+      <li>http://ux.walkme.com/infographic-making-strong-business-case-roi-ux/</li>
+      <li>https://www.experiencedynamics.com/blog/2015/03/30-ux-statistics-you-should-not-ignore-infographic</li>
+      <li>http://solutions.forrester.com/Global/FileLib/Forr_Perspective/Forrester-Perspective-CX-2.pdf</li>
+    </ol>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">Case Studies</Heading>
+    <UnorderedList>
+      <Appear><ListItem><strong>Anthropologie</strong> increased sales <strong>24%</strong> after UX redesign</ListItem></Appear>
+      <Appear><ListItem><strong>Staples</strong> increased visitors <strong>80%</strong>, with <strong>67%</strong> increase in repeat visitors</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    <p>Sources:</p>
+    <ol>
+      <li>https://uxmag.com/articles/designing-superior-shopping-experiences</li>
+      <li>https://humanfactors.com/case-studies-staples.aspx</li>
+    </ol>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">Development Time</Heading>
+    <UnorderedList>
+      <Appear><ListItem><strong>33%-50%</strong> reduction in development time</ListItem></Appear>
+      <Appear><ListItem><strong>50%</strong> savings in development re-work</ListItem></Appear>
+      <Appear><ListItem><strong>47%</strong> increase in profits <em>from employee training</em></ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    <p>Sources:</p>
+    <ol>
+      <li>http://www.usabilitynet.org/management/c_business.htm</li>
+      <li>https://www.experiencedynamics.com/blog/2014/07/making-strong-business-case-roi-ux-infographic</li>
+      <li>https://web.archive.org/web/20160417011136/http://www.protential.ae/corporate-training-importance-areas-and-roi-investments/</li>
+    </ol>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      <em>So. Many. Numbers!</em>
+    </Heading>
+  </FlexBox>
+  <Notes>
+    Like I mentioned at the beginning, I don't expect anyone to remember these numbers. I want you to
+    remember the overall conclusion here: accessibility is usability, usability improves the customer
+    experience, improved customer experiences lead directly to increased profits. Couple that with a
+    very probably untapped marketshare of $490B and you've got a winning solution!
+
+    <p>I've got one more carrot to discuss before we move on.</p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Image src={Huddle} maxHeight="100%" width="auto" />
+  </FlexBox>
+  <Notes>
+    Who knows what this is? The huddle. Who knows when - and WHY - the huddle was invented?
+
+    <p>
+      In 1894, the Gallaudet University football team was playing against another deaf team. Paul Hubbard,
+      the quarterback didn't want to risk the other team seeing him using ASL to explain the play to his
+      teammates, so he asked them to form a tight circle formation, now known as a huddle.
+    </p>
+
+    <p>
+      Source: https://www.gallaudet.edu/about/huddle/
+    </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Image src={CurbCut} maxHeight="100%" width="auto" />
+  </FlexBox>
+  <Notes>
+    Who knows what this is? The curb cut. Who knows when - and WHY - curb cuts became a thing?
+
+    <p>
+      Ed Roberts was stuck in an iron lung after polio. He needed it at night to sleep, but he was able
+      to get around during the day after teaching himself the same deep breathing techniques deep sea free
+      divers use. He joined with other disabled students at Berkeley and began fighting for their basic
+      civil rights. In the early 1970's they bought bags of concrete and, at night, made their own ramps
+      over the curbs. Their activism led to a September 1971 Berkeley city council resolution to make 
+      sidewalks accessible.
+    </p>
+
+    <p>
+      Around the same time, a bit earlier, the city of Kalamazoo, MI, actually had the first municipally
+      sponsored curb cuts, which happened because of a retired veteran who got fed up with watching his
+      fellow disabled vets struggle to cross the street and step over the curb.
+    </p>
+
+    <p>
+      Source:
+      <ol>
+        <li>https://99percentinvisible.org/episode/curb-cuts/</li>
+        <li>https://mosaicofminds.medium.com/the-curb-cut-effect-how-making-public-spaces-accessible-to-people-with-disabilities-helps-everyone-d69f24c58785</li>
+        <li>https://ssir.org/articles/entry/the_curb_cut_effect</li>
+      </ol>
+    </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%">
+    <Heading fontSize="h2">The Curb Cut Effect</Heading>
+    <Appear><Text>addressing disadvantages or exclusions experienced by one group of people creates an environment that enables <strong>everyone</strong> to participate and contribute fully</Text></Appear>
+  </FlexBox>
+  <Notes>
+    This is the root cause of most of the numbers I've shard above. Making things more usable is an
+    objective, studied, documented way to increase the share of people who can participate, able-bodied or
+    not. Think about handicap doors and the beginning of the pandemic; think about ramps for wheelchairs that
+    are then used by parents with strollers; think about curb cuts and how annoying your bike commute would
+    be without them. Accessibily - USABILITY - helps EVERYONE.
+
+    <p>But it's not all carrots, remember ...</p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%">
+    <Image src={Beyonce} maxHeight="100%" maxWidth="100%" width="auto" />
+  </FlexBox>
+  <Notes>
+    Remember this? The truth is that this matter was settled out of court without any compensation to the
+    plaintiff. However, beyonce.com now has an accessibility statement and lots of improvements (though
+    it has a ways to go to be fully accessible [last I checked in early 2021]).
+
+    <p>
+      Source: https://www.pacermonitor.com/public/case/26585881/Conner_v_Parkwood_Entertainment_LLC
+    </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      It is time for the 🪠
+    </Heading>
+  </FlexBox>
+  <Notes>
+    It's a stick. Remember? Carrots and sticks? Glad you're still with me, thanks! I am not going to spend
+    a lot of time on the liabilities. I think we all know they exist. I just want to highlight a couple items
+    to really drive the point home that you can be held liable if your site is not compliant.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Americans With Disabilities Act
+    </Heading>
+  </FlexBox>
+  <Notes>
+    The simplest definition: it prohibits discrimination based on disability. There are analogous laws
+    in other countries around the world. Tell your legal team to make sure you are compliant in all your
+    markets! https://www.un.org/development/desa/disabilities/disability-laws-and-acts-by-country-area.html
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%">
+    <Image src={Lawsuits} maxHeight="100%" maxWidth="100%" width="auto" />
+  </FlexBox>
+  <Notes>
+    This chart shows all you need - ADA lawsuits are on the rise, and most are won by the plaintiffs.
+    There are some recent cases where federal courts have found the plaintiffs didn't have standing,
+    but it was done on technicalities. The overall trend favors the plaintiff, not the defendant. We
+    are going to take a quick look at two major suits.
+
+    <p>
+      Source:
+      <ol>
+        <li>https://www.adatitleiii.com/2022/03/federal-website-accessibility-lawsuits-increased-in-2021-despite-mid-year-pandemic-lull/</li>
+        <li>ttps://usablenet.com/resources</li>
+      </ol>
+    </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      National Federation of the Blind (NFB), et al. v. Target Corporation
+    </Heading>
+  </FlexBox>
+  <Notes>
+    Targets website was not accessible to blind users, and this case in 2006 set a major precedent for
+    online presences needing to be compliant with the ADA. Target lost, having to pay out $6M in damages
+    and $3M in fees. Target settled the lawsuit and has since partnered with the NFB and has won awards
+    for their accessibility efforts.
+
+    <p>
+      Source: https://dralegal.org/case/national-federation-of-the-blind-nfb-et-al-v-target-corporation/
+    </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Robles v. Domino's Pizza LLC
+    </Heading>
+    <Appear>
+      <Text>
+        How much did Dominos admit, in court, that it would have cost them to make their site compliant?
+      </Text>
+    </Appear>
+    <Appear><Text><strong>$38,000</strong></Text></Appear>
+  </FlexBox>
+  <Notes>
+    As with Targets case, this was due to screen reader incompatibility with both Dominos web and mobile
+    presence. One key feature of this case is that users were given incentives for using those platforms for
+    their orders, and because they were inaccessible it excluded disabled users from receiving those same
+    incentives.
+
+    <p>
+      This case was settle this year, in July 2022, in Robles favor. It went all the way to the US Supreme
+      Court, who declined to hear the case, letting the 9th Circuit ruling in favor of Robles stand. Without
+      getting into a bunch of legalese, that ruling said Robles had standing to sue, and the case moved
+      forward, with Dominoes eventually losing.
+    </p>
+
+    <p>$38k to fix, how much did they spend fighting it up to the Supreme Court?</p>
+
+    <p>
+      Source:
+      <ol>
+        <li>https://www.courtlistener.com/docket/4615111/guillermo-robles-v-dominos-pizza-llc/</li>
+        <li>https://arstechnica.com/tech-policy/2019/10/accessibility-the-future-and-why-dominos-matters/</li>
+      </ol>
+    </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Cost of Non-Compliance
+    </Heading>
+    <Appear><Text><strong>2.71x</strong> the cost of compliance</Text></Appear>
+  </FlexBox>
+  <Notes>
+    So let's assume that it would cost you $100,000 to become compliant. Your liability is at least
+    $271,000. Which would you rather risk?
+
+    <p>
+      Source: https://www.globalscape.com/resources/whitepapers/data-protection-regulations-study
+    </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Is that enough 🪠?
+    </Heading>
+  </FlexBox>
+  <Notes>
+    I think that's enough stick. I think most everyone in the room understands the liabilities.
+    Unfortunately, a lot people view these are "one time" costs and don't view it as a significant
+    risk. That's why I started with the carrots. That's where the real value is.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Quote>
+      "Many organisations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, strengthening brand presence, improving customer experience and colleague productivity."
+      - Paul Smyth, Head of Digital Accessibility, Barclays
+    </Quote>
+  </FlexBox>
+  <Notes>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">But ... there's something we need to talk about</Heading>
+    <UnorderedList>
+      <Appear><ListItem>Do you have a <strong>disabled user persona</strong>?</ListItem></Appear>
+      <Appear><ListItem>Do you measure <strong>disabled user engagement</strong>?</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      If your site was inaccessible, you already lost that market
+    </Heading>
+    <Appear><Text>And you want to know the best part?</Text></Appear>
+  </FlexBox>
+  <Notes>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      IT'S YOUR FAULT!
+    </Heading>
+    <Appear><Text>No, really, <strong>that's a great thing!</strong></Text></Appear>
+  </FlexBox>
+  <Notes>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      YOU CAN FIX IT!
+    </Heading>
+  </FlexBox>
+  <Notes>
+    You are here. You care. That's important. That's huge. There's almost nothing holding you back
+    from an accessible product except bureaucracy. There's no technological barriers to over come,
+    we already have the technology. There's no lack of training, we have training from amazing
+    people available at a moments notice.
+
+    <p>
+      Now, I know some of you may be limited in what you can fix due to that bureaucracy. We have all
+      worked with that person who cares about every penny, and counts them every hour. Take some time
+      to work some numbers for your firm and make the business case. The data is real.
+    </p>
+
+    <p>
+      And I know that's possible for some people. That's hard to put together, and it's hard to stand
+      up to management and confront that. I get it and I don't blame you. Again, you're here. That
+      matters. So do the things you can. Talk to your immediate co-workers about it. Make sure you
+      run some basic accessibility tests on your own code before submitting the pull request. Do the
+      things you can. Every small step makes a world of difference.
+    </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Accessibility is a market differentiator
+    </Heading>
+    <Appear><Text>How will <strong>you</strong> make a difference?</Text></Appear>
+  </FlexBox>
+  <Notes>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="130px">That's All Folks!</Heading>
+  </FlexBox>
+  <Notes>
+      Thank you all so much for coming.
+
+      <p>
+        Other sources:
+        <ol>
+          <li>https://www.w3.org/WAI/business-case/</li>
+          <li>https://karlgroves.com/the-truth-about-the-roi-of-web-accessibility/</li>
+          <li>https://techcrunch.com/2021/07/21/the-real-roi-of-making-your-products-more-accessible/</li>
+          <li>https://www.boia.org/blog/brands-are-losing-billions-by-not-being-digitally-accessible</li>
+
+        </ol>
+      </p>
   </Notes>
 </Slide>
 
