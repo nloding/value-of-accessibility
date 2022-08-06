@@ -29,8 +29,8 @@ import CurbCut from './curb-cut.jpeg';
 import Lawsuits from './ada-lawsuits.png';
 
 // sponsors
-// import Sponsors from './beer-city-code-2022-sponsors.png';
-const SHOW_SPONSORS = false;
+import Sponsors from './kcdc-2022-sponsors.png';
+const SHOW_SPONSORS = true;
 
 const theme = {
   fonts: {
@@ -51,7 +51,7 @@ const template = () => (
     </Box>
     <Box textAlign="right" padding="0">
       <Text fontSize="1.5em">
-        <strong>CONFERENCE NAME</strong> -
+        <strong>KCDC</strong> -
         The Value of Accessibility
       </Text>
     </Box>
