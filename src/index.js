@@ -4,24 +4,14 @@ import ReactDOM from 'react-dom';
 import {
   FlexBox,
   Heading,
-  SpectacleLogo,
   UnorderedList,
-  CodeSpan,
-  OrderedList,
   ListItem,
-  FullScreen,
-  Progress,
   Appear,
-  Stepper,
   Slide,
   Deck,
   Text,
-  Grid,
   Box,
   Image,
-  CodePane,
-  MarkdownSlide,
-  MarkdownSlideSet,
   Notes,
   Link,
   Table,
@@ -119,12 +109,14 @@ const Presentation = () => (
       <Appear><ListItem>He / him ... PTSD</ListItem></Appear>
       <Appear><ListItem>Husband, father, amateur historian</ListItem></Appear>
       <Appear><ListItem>Oreo enthusiast</ListItem></Appear>
+      <Appear><ListItem>IAAP CPWA</ListItem></Appear>
       <Appear><ListItem>Senior Developer Relations Engineer @ <Link href="https://basistheory.com/">Basis Theory</Link></ListItem></Appear>
       <Appear><ListItem><Link href="https://twitter.com/NathanLoding">@NathanLoding</Link>*</ListItem></Appear>
     </UnorderedList>
   </FlexBox>
   <Notes>
-    Why I asked the poll questions - I am often not the smartest person in the room!
+    Why I asked the poll questions - I am often not the smartest person in the room! (Reminder to self:
+    Internation Association of Accessibility Professionals Certified Professional in Web Accessibility)
   </Notes>
 </Slide>
 
@@ -142,7 +134,7 @@ const Presentation = () => (
     <Heading fontSize="h2">There's more to it than lawsuits</Heading>
     <UnorderedList>
       <Appear><ListItem>🪠 - lawsuits, liabilities, PR issues</ListItem></Appear>
-      <Appear><ListItem>🥕 - increased customer base, lower operational costs, aligned values</ListItem></Appear>
+      <Appear><ListItem>🥕 - increased customer base, lower operational costs, aligned values, increased profits</ListItem></Appear>
     </UnorderedList>
   </FlexBox>
   <Notes>
@@ -291,7 +283,7 @@ const Presentation = () => (
   </Notes>
 </Slide>
 
-<Slide>
+{/* <Slide>
   <FlexBox height="100%" flexDirection="column">
     <Heading fontSize="h2">In the United States ...</Heading>
     <UnorderedList>
@@ -307,7 +299,7 @@ const Presentation = () => (
   <Notes>
     Source: CDC
   </Notes>
-</Slide>
+</Slide> */}
 
 <Slide>
   <FlexBox height="100%" flexDirection="column">
@@ -418,7 +410,7 @@ const Presentation = () => (
         <TableRow>
           <TableCell>Channel</TableCell>
           <TableCell>%/sales</TableCell>
-          <TableCell>Margin</TableCell>
+          <TableCell>Cost</TableCell>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -476,7 +468,7 @@ const Presentation = () => (
         <TableRow>
           <TableCell>Channel</TableCell>
           <TableCell>%/sales</TableCell>
-          <TableCell>Margin</TableCell>
+          <TableCell>Cost</TableCell>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -541,6 +533,25 @@ const Presentation = () => (
 
 <Slide>
   <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Whoa, let's look back for a moment
+    </Heading>
+    <UnorderedList>
+      <Appear><ListItem>Most websites have accessibility issues</ListItem></Appear>
+      <Appear><ListItem>$490 billion in disposable income</ListItem></Appear>
+      <Appear><ListItem>Driving more online traffic lowers costs</ListItem></Appear>
+      <Appear><ListItem>There's a huge market having issues online</ListItem></Appear>
+    </UnorderedList>
+  </FlexBox>
+  <Notes>
+    Add it all together! Now, let's go back for a minute. We've looked at a confusing array of numbers
+    that show the untapped potential of the disabled market. But there's more to it than just potential
+    new customers. Let's go back to what accessibility is.
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
     <Heading fontSize="h2">What is Accessibility?</Heading>
     <Appear><Text>"the practice of making your websites <strong>usable by as many people as possible</strong>."</Text></Appear>
   </FlexBox>
@@ -556,8 +567,8 @@ const Presentation = () => (
     <UnorderedList>
       <Appear><ListItem><strong>35%</strong> increase in sales conversions</ListItem></Appear>
       <Appear><ListItem><strong>83%</strong> increase for all KPIs</ListItem></Appear>
-      <Appear><ListItem><strong>79%</strong> of users will go elsewhere</ListItem></Appear>
       <Appear><ListItem><strong>43%</strong> increase in performance, vs 14.5%</ListItem></Appear>
+      <Appear><ListItem><strong>79%</strong> of users will go elsewhere</ListItem></Appear>
     </UnorderedList>
   </FlexBox>
   <Notes>
