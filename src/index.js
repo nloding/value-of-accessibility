@@ -67,14 +67,19 @@ const Presentation = () => (
         <Heading fontSize="h3" color="#ebe5da">A Business Case for A11y</Heading>
       </FlexBox>
       <Notes>
-        Welcome to my talk! In the last year or two, a lot has been written about the "ROI" or "return
+        Welcome to my talk! This is meant to give you ammunition to take to the C-suite to build the
+        business case for accessibility. This isn't about the internet as a human right (it is),
+        this isn't about why discriminating against disabled people is a terrible moral choice. It's
+        about trying to sell people who don't care about anything but the bottom line.
+        
+        <p>In the last year or two, a lot has been written about the "ROI" or "return
         on investment" of accessibility. There are lots of sites out there (many linked in my repo), and
         I encourage everyone to do a little bit more research about accessibility in your particular
         market. I am going to be throwing a TON of numbers at you. I don't expect anyone to remember all of
         this, come back to the slides on GitHub and check the data and sources for yourself.  What I
         want to do is dispel the myths that accessibility is cost prohibitive, and that the opposite is,
         in fact, true: accessibility leads to increased profits, lower development costs, and happier
-        customers. That's the goal of any business right?
+        customers. That's the goal of any business right?</p>
       </Notes>
     </Slide>
 
@@ -85,6 +90,16 @@ const Presentation = () => (
         </FlexBox>
       </Slide>
     }
+
+    <Slide>
+      <FlexBox height="100%">
+        <Heading fontSize="h3">The internet is a human right</Heading>
+      </FlexBox>
+      <Notes>
+        If you don't agree with this need to have a talk, come see me. Unfortunately "human rights"
+        aren't often considered a good business case. So here we are.
+      </Notes>
+    </Slide>
 
     <Slide>
       <FlexBox height="100%">
@@ -161,6 +176,16 @@ const Presentation = () => (
   </FlexBox>
   <Notes>
     What do we think of this definition?
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">What is Accessibility?</Heading>
+    <Text>"the practice of making your websites usable by people with disabilities."</Text>
+  </FlexBox>
+  <Notes>
+    People first language.
   </Notes>
 </Slide>
 
@@ -655,7 +680,7 @@ const Presentation = () => (
 
 <Slide>
   <FlexBox height="100%" flexDirection="column">
-    <Image src={CurbCut} maxHeight="100%" width="auto" />
+    <Image src={CurbCut} maxHeight="100%" width="auto" maxWidth="100%" />
   </FlexBox>
   <Notes>
     Who knows what this is? The curb cut. Who knows when - and WHY - curb cuts became a thing?
@@ -832,6 +857,20 @@ const Presentation = () => (
     <p>
       Source: https://www.globalscape.com/resources/whitepapers/data-protection-regulations-study
     </p>
+  </Notes>
+</Slide>
+
+<Slide>
+  <FlexBox height="100%" flexDirection="column">
+    <Heading fontSize="h2">
+      Cost of "No Code" Compliance
+    </Heading>
+    <Appear><Text>Overlays <strong>are not</strong> accessible</Text></Appear>
+    <Appear><Link href="https://overlayfactsheet.com/">https://overlayfactsheet.com/</Link></Appear>
+  </FlexBox>
+  <Notes>
+    Accessibility overlays are snake oil and don't save you from any liability, and they create
+    a worse user experience. The literal anti-thesis of what we want.
   </Notes>
 </Slide>
 
